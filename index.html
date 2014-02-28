@@ -1,0 +1,418 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="/static/images/Favicon.ico" />
+	<title>马尔代夫酒店集团_广州广之旅官方网站_广之旅在线</title>
+	<link rel="stylesheet" href="/static/css/global.css"/>
+	<link rel="stylesheet" href="css/hotel_search.css"/>
+    <script src="/Static/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/scripts/main.js"></script>	
+    <script type="text/javascript" src="scripts/jquery.backstretch.min.js"></script>
+	<script type="text/javascript">
+		$(function(doc_ready){
+			var i = 0;
+			$(window).bind("scroll", function (event) {
+				//滚动条到网页头部的 高度，兼容ie,ff,chrome
+				var top = document.documentElement.scrollTop + document.body.scrollTop; //??????
+				//网页的高度
+				var textheight = $(document).height();
+				// 网页高度-top-当前窗口高度 
+				if (textheight - top - $(window).height() <= 100) {
+					if (i >= 25) {
+						return; //控制最大只能加载到100条
+					}
+					$('#divContent').css("height", $(document).height() + 400);
+					i++;
+
+
+					//可以根据实际情况，获取ajax动态数据加载到 divContent中
+
+					var dataParas = '{ pageIdx:"' + i.toString() + '"}'; // 这里要直接使用JOSN作为webService参数
+					$.ajax({
+						type: "POST",
+						contentType: "text/html",
+						data: dataParas,
+						url: "handle.ashx",
+						success: function (data) {
+							$('#mainContent').append(data);
+						},
+						error: function () {
+							alert("error occured!");
+						}
+					});
+				}
+			});		
+			$.backstretch('images/bg.jpg');
+			var mini=$('#miniNav');
+			$(window).scroll(function(){
+				if($(document).scrollTop()>99){
+					mini.addClass('fixed').addClass('mini-fixed');
+				}else{
+					mini.removeClass('fixed').removeClass('mini-fixed');
+				}
+			});
+			if ($("#searchInput").val() == "")
+				$('.search-panel-fields #searchLable').html('搜索马尔代夫酒店');
+		});
+		//页面加载时引发
+		$(document).ready(doc_ready);
+
+		//页面加载时加载前4条
+		function doc_ready() {
+
+			var jsonParas = {'pageIdx':'0'};
+			$.ajax({
+				type: "POST",
+				contentType: "text/html",
+				data: jsonParas,
+				url: "handle.ashx",
+				success: function (data) {
+					$('#mainContent').html(data);
+				},
+				error: ajax_error()
+			});
+
+		}
+
+		function ajax_error() {
+			//alert("The call to webService is failed!!!!!");
+		}
+	</script>
+</head>
+<body>
+<div class="staticWarp">
+	<div id="mininavWrap" class="mininavWrap fixed">
+		<div class="miniNav layout">
+			<div class="mininavLeft">
+				<a href="javascript:void(0);" class="item forIndex" onclick="SetHome(this,'http://www.gzl.com.cn');">设为首页</a>
+				<a href="http://www.gzl.com.cn/page/license.aspx" target="_blank" class="item">经营许可证 </a>
+			</div>
+			<div class="mininavRight">
+				<a href="/users/login.shtml" class="item login">登录</a>
+				<a href="/users/registration.shtml" target="_blank" class="item register">免费注册</a>
+				<a href="/travel/OutTeam.shtml" class="item">出团信息查询</a>
+				<a href="/travel/OrderPayment.shtml" class="item">我要支付</a>
+				<a href="/help/default.shtml" class="item">帮助中心</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="miniNav" class="mini-nav">
+	<div class="mini-search layout">
+		<div class="logo">
+			<a href="http://www.gzl.com.cn" target="_self" title="广之旅唯一官方网站_广之旅">
+				<img src="images/logo_75x34.png" alt="广之旅唯一官方网站_广之旅" title="广之旅唯一官方网站_广之旅" width="75" height="34" class="load-img"></a>
+		</div>
+		<div class="search-panel layout">
+			<div id="searchPanel" class="search-panel-fields">
+				<label id="searchLable"></label>
+				<div id="preloader" class="preloader" style="display: none">
+				</div>
+				<div class="searchListContent">
+					<div class="static">
+						<input id="searchInput" x-webkit-speech="" x-webkit-grammar="builtin:translate" autocomplete="off">
+						<input id="search_id" type="hidden">
+						<div id="searchList" class="searchList" style="display: none;">
+							<div id="hotLine">
+							</div>
+							<div id="autoComplete" class="autoComplete">
+								<table>
+									<tbody><tr>
+										<td>
+										</td>
+									</tr>
+								</tbody></table>
+							</div>
+							<div id="autoCompleteshow" class="autoComplete">
+								<table id="tblist" class="listContent" style="text-align: left; vertical-align: top">
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="searchBtn">
+				<button type="button" onclick="gosearch()">
+					搜 索</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="subNavWrap">
+	<div class="subNav">
+		<div class="layoutHead layout">
+			<div class="logo" id="promoSet" style="position: relative;">
+				<a href="http://www.gzl.com.cn" target="_self" title="广之旅唯一官方网站_广之旅">
+				<img src="/Static/images/logo_133x60.png" alt="广之旅唯一官方网站_广之旅" title="广之旅唯一官方网站_广之旅" width="133" height="60" class="load-img"></a>
+				<a href="#" class="subTitle">马尔代夫</a>
+			</div>
+			<div class="search">
+				<div class="search-panel layout">
+					<div id="searchPanel" class="search-panel-fields">
+						<label id="searchLable"></label>
+						<div id="preloader" class="preloader" style="display: none">
+						</div>
+						<div class="searchListContent">
+							<div class="static">
+								<input id="searchInput" x-webkit-speech="" x-webkit-grammar="builtin:translate" autocomplete="off">
+								<input id="search_id" type="hidden">
+								<div id="searchList" class="searchList" style="display: none;">
+									<div id="hotLine">
+									</div>
+									<div id="autoComplete" class="autoComplete">
+										<table>
+											<tbody><tr>
+												<td>
+												</td>
+											</tr>
+										</tbody></table>
+									</div>
+									<div id="autoCompleteshow" class="autoComplete">
+										<table id="tblist" class="listContent" style="text-align: left; vertical-align: top">
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="searchBtn">
+						<button type="button" onclick="gosearch()">
+							搜 索</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.subNavWrap{
+		height:90px;
+	}
+	div.subNav{
+		height:100%;
+		box-shadow:0 1px 5px #e4e4e4;
+	}
+</style>
+<div id="mainContent" class="content layout">
+	<!-- <div class="group layout">
+		<div class="lfColumn">
+			<dt><img src="images/logo_01.jpg" alt="希尔顿" title="希尔顿"/></dt>
+		</div>
+		<div class="rgColumn mainCont">
+			<div class="intro">
+				<h1 class="summary">希尔顿集团 Hilton</h1>
+				<div class="block">
+					<div class="title18">
+						<h4>行程特色</h4>
+					</div>
+					<p>希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。</p>
+				</div>
+				<div class="block">
+					<div class="title18">
+						<h4>酒店集团说明</h4>
+					</div>
+					<p>希尔顿国际酒店集团(HI)，为总部设于英国的希尔顿集团公司旗下分支，拥有除美国外全球范围内"希尔顿"商标的使用权。美国境内的希尔顿酒店则由希尔顿酒店管理公司(HHC)拥有并管理。希尔顿国际酒店集团经营管理着403间酒店，包括261间希尔顿酒店，142间面向中端市场的"斯堪的克"酒店，以及与总部设在北美的希尔顿酒店管理公司合资经营的、分布在12个国家中的18间"康拉德"(亦称"港丽")酒店。</p><p>希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。希尔顿国际集团在全球的发展以谨慎著称。</p>
+				</div>				
+			</div>
+			<div class="islands">
+				<div class="islands_detail layout">
+					<div class="lfColumn"><img src="images/logo_02.jpg" alt=""/></div>
+					<div class="rgColumn">
+						<h4>Conrad Maldives Rangali Island</h4>
+						<p>港丽岛/康莱德岛</p>
+						<div class="detail layout">
+							<dl>
+								<dt>岛屿级别：</dt>
+								<dd>至尊</dd>
+								<dt>所属环礁：</dt>
+								<dd><p>南阿里夫环礁</p><p>South Alifu Atoll</p></dd>								
+							</dl>
+							<dl>
+								<dt>房间总数：</dt>
+								<dd>150间</dd>
+								<dt>距离马累：</dt>
+								<dd>107公里</dd>
+							</dl>
+							<dl>
+								<dt>一价全包：</dt>
+								<dd>否</dd>
+								<dt>中文服务：</dt>
+								<dd>有</dd>
+							</dl>							
+						</div>
+					</div>
+				</div>
+				<div class="islands_detail layout">
+					<div class="lfColumn"><img src="images/logo_02.jpg" alt=""/></div>
+					<div class="rgColumn">
+						<h4>Conrad Maldives Rangali Island</h4>
+						<p>港丽岛/康莱德岛</p>
+						<div class="detail layout">
+							<dl>
+								<dt>岛屿级别：</dt>
+								<dd>至尊</dd>
+								<dt>所属环礁：</dt>
+								<dd><p>南阿里夫环礁</p><p>South Alifu Atoll</p></dd>								
+							</dl>
+							<dl>
+								<dt>房间总数：</dt>
+								<dd>150间</dd>
+								<dt>距离马累：</dt>
+								<dd>107公里</dd>
+							</dl>
+							<dl>
+								<dt>一价全包：</dt>
+								<dd>否</dd>
+								<dt>中文服务：</dt>
+								<dd>有</dd>
+							</dl>							
+						</div>					
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div> -->
+	
+</div>
+<div class="footer layout">	
+		<div class="layout center content">
+			<div class="column_helper_01">
+				<h2>关于广之旅</h2>
+                <span id="ctl00_Footer1_lblPageFooter"><ul><li><a href="/Page/Detail_37.html" target="_blank" title="公司简介">公司简介</a></li> <li><a href="/Page/Detail_132.html" target="_blank" title="门市网点">门市网点</a></li> <li><a href="/Page/Detail_94.html" target="_blank" title="联系我们">联系我们</a></li> <li><a href="/Page/Detail_95.html" target="_blank" title="网站地图">网站地图</a></li> </ul><ul><li><a href="http://gzl.hirede.com/CareerSite/EmployerBasic" target="_blank" title="诚聘英才">诚聘英才</a></li> <li class="mainMenu"><a href="/Link/FriendLink.html" target="_blank" title="友情链接">友情链接</a></li></ul> </span>
+			</div>
+			<div id="divPay" class="column_helper_02">
+            <h2>网上支付相关问题</h2>
+				<ul>
+					<li><a href="##">网上付款方式</a></li>
+					<li><a href="##">如何使用快钱支付</a></li>
+					<li><a href="##">如何使用支付宝支付</a></li>
+					<li><a href="##">支付限额问题</a></li>
+				</ul>
+			</div>
+			<div id="visa" class="column_helper_03">
+            <h2>签证相关问题</h2>
+                <span id="ctl00_Footer1_lblVisa"><ul><li><a href="/Help/Detail.aspx?Id=487" target="_blank" title="什么是签证？">什么是签证？</a></li> <li><a href="/Help/Detail.aspx?Id=488" target="_blank" title="签证的作用是什么？">签证的作用是什么？</a></li> <li><a href="/Help/Detail.aspx?Id=485" target="_blank" title="签证与护照有什么区别?">签证与护照有什么区别?</a></li> <li><a href="/Help/Detail.aspx?Id=516" target="_blank" title="申请外国签证对邀请信的要求？">申请外国签证对邀请信的要求？</a></li></ul><ul><li><a href="/Help/Detail.aspx?Id=515" target="_blank" title="尚未离境签证就过期了，怎么办？">尚未离境签证就过期了，怎么办？</a></li> <li><a href="/Help/Detail.aspx?Id=514" target="_blank" title="若发现签证上的信息有误怎么办？">若发现签证上的信息有误怎么办？</a></li> <li><a href="/Help/Detail.aspx?Id=513" target="_blank" title="签证费和签证受理费是一回事吗？">签证费和签证受理费是一回事吗？</a></li> <li><a href="/Help/Detail.aspx?Id=512" target="_blank" title="使领馆拒绝发给签证怎么办？">使领馆拒绝发给签证怎么办？</a></li></ul><ul><li><a href="/Help/Detail.aspx?Id=511" target="_blank" title="什么是加签？">什么是加签？</a></li> <li><a href="/Help/Detail.aspx?Id=510" target="_blank" title="按领事辖区范围申办签证是何意？">按领事辖区范围申办签证是何意？</a></li> <li><a href="/Help/Detail.aspx?Id=509" target="_blank" title="使馆签证受理时间有什么要求?">使馆签证受理时间有什么要求?</a></li> <li><a href="/Help/Detail.aspx?Id=508" target="_blank" title="签证的提交材料有什么注意事项?">签证的提交材料有什么注意事项?</a></li></ul></span>
+			</div>
+			<div class="copyright">
+				<div class="footer-ext">
+					<a class="s1" title="支付宝-特约商家">支付宝-特约商家</a>
+					<a class="s2" href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action" target="_blank" title="经营性网站备案信息">经营性网站备案信息</a>
+					<a class="s3" href="http://www.gzjd.gov.cn/newgzjd/baojing/110.jsp?catid=318" target="_blank" title="网络110报警服务">网络110报警服务</a>
+					<a class="s4" href="/page/license.aspx" target="_blank" title="旅行社业务经营许可证">旅行社业务经营许可证</a>
+				</div>
+				<div class="footer-copyright">
+					<p>本网站产品和服务由广州广之旅国际旅行社股份有限公司提供</p>
+					<p>© 2013 gzl.com.cn 版权所有<span>|</span>ICP经营许可号：粤ICP备06044810号</p>
+				</div>				
+			</div>
+		</div>
+		
+		<div class="link center layout">
+			<ul>
+				<li class="layout">
+					<dt>出境游：</dt>
+					<dd><a target="_blank" href="http://mudidi.gzl.com.cn/taiguo/Thailand.html">泰国</a>
+						<a target="_blank" href="http://mudidi.gzl.com.cn/xinma/Xinma.html">新马</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u65B0%u52A0%u5761">新加坡</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u9A6C%u6765%u897F%u4E9A">马来西亚</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u69DF%u57CE">槟城</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u8D8A%u5357">越南</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u67EC%u57D4%u5BE8">柬埔寨</a>
+						<a target="_blank" href="http://mudidi.gzl.com.cn/riben/Japan.html">日本</a>
+						<a target="_blank" href="http://mudidi.gzl.com.cn/hanguo/Korea.html">韩国</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u4E1C%u4EAC">东京</a>
+						<a target="_blank" href="http://mudidi.gzl.com.cn/eluosi/Russia.html">俄罗斯</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u6CD5%u56FD">法国</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u610F%u5927%u5229">意大利</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u745E%u58EB">瑞士</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u82F1%u56FD">英国</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u6CD5%u745E%u610F">法瑞意</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u5FB7%u56FD">德国</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u5317%u6B27">北欧</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u4E1C%u6B27">东欧</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u6FB3%u5927%u5229%u4E9A">澳大利亚</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u65B0%u897F%u5170">新西兰</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u7F8E%u56FD">美国</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u52A0%u62FF%u5927">加拿大</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u8FEA%u62DC">迪拜</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u5357%u975E">南非</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u571F%u8033%u5176">土耳其</a>
+						<a target="_blank" href="/Travels/List.aspx?keywords=%u4EE5%u8272%u5217">以色列</a></dd>
+				</li>
+				<li class="layout">
+					<dt>国内游：</dt>
+					<dd><a target="_blank" href="/Travels/List.aspx?keywords=%u5317%u4EAC">北京</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5929%u6D25">天津</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u4EAC%u6D25">京津</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u4E09%u4E9A">三亚</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u53A6%u95E8">厦门</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9F13%u6D6A%u5C7F">鼓浪屿</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u4E5D%u5BE8%u6C9F">九寨沟</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6210%u90FD">成都</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9EC4%u9F99">黄龙</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6606%u660E">昆明</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5927%u7406">大理</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u4E4C%u9547">乌镇</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u676D%u5DDE">杭州</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9EC4%u5C71">黄山</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9752%u5C9B">青岛</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6CF0%u5C71">泰山</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5927%u8FDE">大连</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u957F%u767D%u5C71">长白山</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6842%u6797">桂林</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9633%u6714">阳朔</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5F20%u5BB6%u754C">张家界</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u51E4%u51F0%u53E4%u57CE">凤凰古城</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u795E%u519C%u67B6">神农架</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9EC4%u679C%u6811">黄果树</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u897F%u85CF">西藏</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u62C9%u8428">拉萨</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6797%u829D">林芝</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u897F%u5B89">西安</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5175%u9A6C%u4FD1">兵马俑</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u65B0%u7586">新疆</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u547C%u4F26%u8D1D%u5C14">呼伦贝尔</a>
+					</dd>
+				</li>
+				<li class="layout">
+					<dt>省内游：</dt>
+					<dd><a target="_blank" href="/Travels/List.aspx?keywords=%u805A%u9F99%u6E7E%u5929%u7136%u6E29%u6CC9">聚龙湾天然温泉</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5C71%u6CC9%u6E7E">山泉湾</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u4E09%u6C34%u6E29%u6CC9">三水温泉</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u68EE%u6CE2%u62C9">森波拉</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u78A7%u6C34%u6E7E">碧水湾</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u53E4%u515C">古兜温泉</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9F0E%u6E56%u5C71">鼎湖山</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u95F8%u5761">闸坡</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6C99%u6252%u6E7E">沙扒湾</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u4E39%u971E%u5C71">丹霞山</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5DFD%u5BEE%u6E7E">巽寮湾</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5730%u6D3E%u6E29%u6CC9">地派温泉</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u4E3D%u5BAB%u6E29%u6CC9">丽宫温泉</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u65B0%u4E30%u4E91%u5929%u6D77">新丰云天海</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6D77%u6CC9%u6E7E">海泉湾</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u5947%u6D1E%u6E29%u6CC9">奇洞温泉</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u65B0%u94F6%u76CF%u6E29%u6CC9">新银盏温泉</a>
+					</dd>
+				</li>
+				<li class="layout">
+					<dt>港澳台：</dt>
+					<dd><a target="_blank" href="http://mudidi.gzl.com.cn/xianggang/HongKong.html">香港</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6FB3%u95E8">澳门</a>
+					<a target="_blank" href="http://mudidi.gzl.com.cn/taiwan/Taiwan.html">台湾</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u8FEA%u58EB%u5C3C">迪士尼</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6D77%u6D0B%u516C%u56ED">海洋公园</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u6602%u576A360">昂坪360</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u8721%u50CF%u9986">蜡像馆</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u57A6%u4E01">垦丁</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u53F0%u5317">台北</a>
+					<a target="_blank" href="/Travels/List.aspx?keywords=%u9AD8%u96C4">高雄</a>
+					</dd>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>

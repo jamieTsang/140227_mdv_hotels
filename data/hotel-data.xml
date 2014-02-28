@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<group id="0">
+		<name>1希尔顿集团 Hilton</name>
+		<special>[p]希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。[/p]</special>
+		<defined>[p]希尔顿国际酒店集团(HI)，为总部设于英国的希尔顿集团公司旗下分支，拥有除美国外全球范围内"希尔顿"商标的使用权。美国境内的希尔顿酒店则由希尔顿酒店管理公司(HHC)拥有并管理。希尔顿国际酒店集团经营管理着403间酒店，包括261间希尔顿酒店，142间面向中端市场的"斯堪的克"酒店，以及与总部设在北美的希尔顿酒店管理公司合资经营的、分布在12个国家中的18间"康拉德"(亦称"港丽")酒店。[/p][p]希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。希尔顿国际集团在全球的发展以谨慎著称。[/p]</defined>
+		<group-pic-url>images/logo_01.jpg</group-pic-url>
+		<islands>
+			<island id="0">
+				<island-pic-url>images/island_01.jpg</island-pic-url>
+				<island-name-en>Conrad Maldives Rangali Island</island-name-en>
+				<island-name-zh>港丽岛/康莱德岛</island-name-zh>
+				<class>至尊</class>
+				<location-zh>南阿里夫环礁</location-zh>
+				<location-en>South Alifu Atoll</location-en>
+				<rooms>150间</rooms>
+				<distance>107公里</distance>
+				<price-one>否</price-one>
+				<chinese>有</chinese>
+			</island>
+		</islands>
+	</group>
+	<group id="1">
+		<name>2四季酒店集团 Four Seasons</name>
+		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
+		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
+		<group-pic-url>images/logo_02.jpg</group-pic-url>
+		<islands>
+			<island id="0">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>
+			<island id="1">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>			
+		</islands>
+	</group>
+	<group id="2">
+		<name>3四季酒店集团 Four Seasons</name>
+		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
+		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
+		<group-pic-url>images/logo_02.jpg</group-pic-url>
+		<islands>
+			<island id="0">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>
+			<island id="1">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>			
+		</islands>
+	</group>
+	<group id="3">
+		<name>4四季酒店集团 Four Seasons</name>
+		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
+		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
+		<group-pic-url>images/logo_02.jpg</group-pic-url>
+		<islands>
+			<island id="0">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>
+			<island id="1">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>			
+		</islands>
+	</group>
+	<group id="4">
+		<name>5四季酒店集团 Four Seasons</name>
+		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
+		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
+		<group-pic-url>images/logo_02.jpg</group-pic-url>
+		<islands>
+			<island id="0">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>
+			<island id="1">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>			
+		</islands>
+	</group>
+	<group id="5">
+		<name>6四季酒店集团 Four Seasons</name>
+		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
+		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
+		<group-pic-url>images/logo_02.jpg</group-pic-url>
+		<islands>
+			<island id="0">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>
+			<island id="1">
+				<island-pic-url>images/island_02.jpg</island-pic-url>
+				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
+				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+				<class>奢华</class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll</location-en>
+				<rooms>96间</rooms>
+				<distance>20公里 </distance>
+				<price-one>有</price-one>
+				<chinese>有</chinese>
+			</island>			
+		</islands>
+	</group>	
+</root>
