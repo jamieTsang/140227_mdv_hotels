@@ -140,9 +140,21 @@
 .search-panel-fields label{
 	left:10px;
 }
-
-
-
+.state{
+	background-color:#FFF;
+	padding:15px;
+	text-align:center;
+	width:auto;
+	height:auto;
+}
+.preloader{
+	width: 18px;
+	height: 18px;
+	background: url(/static/images/preloader_18x18.gif);
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:5px;
+}
 
 
 

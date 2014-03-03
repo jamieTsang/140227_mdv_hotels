@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.Linq;
 using System.Xml.Linq;
+using System.Text;
 
 public class handle : IHttpHandler {
     public class groups {
@@ -49,7 +50,20 @@ public class handle : IHttpHandler {
         }
     }
     public void ProcessRequest (HttpContext context) {
-        var page=Convert.ToInt16(context.Request.Form["pageIdx"]);
+        context.Response.ContentType = "text/plain";
+        context.Request.ContentEncoding = Encoding.GetEncoding("utf-8");
+        context.Response.ContentEncoding = Encoding.GetEncoding("utf-8");
+        var page = Convert.ToInt16(context.Request.Form["pageIdx"]);
+        //var key = context.Request.Form["key"].Trim() != null ? HttpUtility.UrlDecode(context.Request.Form["key"].Trim()) : "*";
+        var key = "";
+        try
+        {
+            key = HttpUtility.UrlDecode(context.Request.Form["key"].Trim());
+        }
+        catch
+        {
+            key = "*";
+        }
         //var keyString = context.Request.Form["key"];
         string xmlPath = "/subject/140227_mdv_hotels/data/hotel-data.xml";
         int gt=page*4;
@@ -58,40 +72,52 @@ public class handle : IHttpHandler {
         {
             var data = XDocument.Load(context.Server.MapPath(xmlPath));
             var root = data.Element("root");
-            var result = from g in root.Elements("group")
-                         where int.Parse(g.Attribute("id").Value) <= gt && int.Parse(g.Attribute("id").Value) <= lt
+            IEnumerable<XElement> result=null;
+            if (key == "*")
+            {
+                result = from g in root.Elements("group")
+                             where int.Parse(g.Attribute("id").Value) >= gt && int.Parse(g.Attribute("id").Value) < lt
+                             select g;
+            }
+            else {
+                var searchKey = from g in root.Elements("group")
+                                where g.Element("name").Value.Contains(key)
+                                select g;
+                XElement tepl = new XElement("root", searchKey);
+                result = from g in tepl.Elements("group")
+                         where int.Parse(g.Attribute("id").Value) >= gt && int.Parse(g.Attribute("id").Value) < lt
                          select g;
-            String resultHTML="";
+            }
+            String resultHTML="Null";
             foreach(var item in result){
-                var group = new groups(item);
-                resultHTML +="<div class=\"group layout\">";
-		        resultHTML +="<div class=\"lfColumn\">";
-                resultHTML += "<dt><img src=\"" + group.group_pic_url + "\" alt=\"" + group.name + "\" title=\"" + group.name + " width=\"147\" height=\"147\"\"/></dt></div>";
-		
-		        resultHTML +="<div class=\"rgColumn mainCont\"><div class=\"intro\">";
+                    var group = new groups(item);
+                    if (resultHTML == "Null")
+                        resultHTML = "";
+                    resultHTML += "<div class=\"group layout\">";
+                    resultHTML += "<div class=\"lfColumn\">";
+                    resultHTML += "<dt><img src=\"" + group.group_pic_url + "\" alt=\"" + group.name + "\" title=\"" + group.name + " width=\"147\" height=\"147\"\"/></dt></div>";
+                    resultHTML += "<div class=\"rgColumn mainCont\"><div class=\"intro\">";
 
-                resultHTML += "<h1 class=\"summary\">" + group.name + "</h1>";
-				resultHTML +="<div class=\"block\"><div class=\"title18\"><h4>行程特色</h4></div>";
-                resultHTML += group.special.Replace("[p]", "<p>").Replace("[/p]", "</p>");
-				resultHTML +="</div><div class=\"block\"><div class=\"title18\"><h4>酒店集团说明</h4></div>";
-                resultHTML += group.defined.Replace("[p]", "<p>").Replace("[/p]", "</p>"); ;
-				resultHTML +="</div></div>";
-                resultHTML += "<div class=\"islands\">";
-                foreach (XElement island in group.islands)
-                {
-                    var _island = new islandClass(island);
-                    resultHTML += "<div class=\"islands_detail layout\">";
-                    resultHTML += "<div class=\"lfColumn\"><img width=\"126\" height=\"126\" src=\"" + _island.island_pic_url + "\" alt=\"\"/></div>";
-                    resultHTML += "<div class=\"rgColumn\"><h4>"+_island.island_name_en+"</h4><p>"+_island.island_name_zh+"</p>";
-                    resultHTML += "<div class=\"detail layout\">";
-                    resultHTML += "<dl><dt>岛屿级别：</dt><dd>"+_island.className+"</dd><dt>所属环礁：</dt><dd><p>"+_island.location_zh+"</p><p>"+_island.location_en+"</p></dd></dl>";
-                    resultHTML += "<dl><dt>房间总数：</dt><dd>" + _island.rooms + "</dd><dt>距离马累：</dt><dd>" + _island.distance + "</dd></dl>";
-                    resultHTML += "<dl><dt>一价全包：</dt><dd>"+_island.price_one+"</dd><dt>中文服务：</dt><dd>"+_island.chinese+"</dd></dl>";
+                    resultHTML += "<h1 class=\"summary\">" + group.name + "</h1>";
+                    resultHTML += "<div class=\"block\"><div class=\"title18\"><h4>行程特色</h4></div>";
+                    resultHTML += group.special.Replace("[p]", "<p>").Replace("[/p]", "</p>");
+                    resultHTML += "</div><div class=\"block\"><div class=\"title18\"><h4>酒店集团说明</h4></div>";
+                    resultHTML += group.defined.Replace("[p]", "<p>").Replace("[/p]", "</p>"); ;
+                    resultHTML += "</div></div>";
+                    resultHTML += "<div class=\"islands\">";
+                    foreach (XElement island in group.islands)
+                    {
+                        var _island = new islandClass(island);
+                        resultHTML += "<div class=\"islands_detail layout\">";
+                        resultHTML += "<div class=\"lfColumn\"><img width=\"126\" height=\"126\" src=\"" + _island.island_pic_url + "\" alt=\"\"/></div>";
+                        resultHTML += "<div class=\"rgColumn\"><h4>" + _island.island_name_en + "</h4><p>" + _island.island_name_zh + "</p>";
+                        resultHTML += "<div class=\"detail layout\">";
+                        resultHTML += "<dl><dt>岛屿级别：</dt><dd>" + _island.className + "</dd><dt>所属环礁：</dt><dd><p>" + _island.location_zh + "</p><p>" + _island.location_en + "</p></dd></dl>";
+                        resultHTML += "<dl><dt>房间总数：</dt><dd>" + _island.rooms + "</dd><dt>距离马累：</dt><dd>" + _island.distance + "</dd></dl>";
+                        resultHTML += "<dl><dt>一价全包：</dt><dd>" + _island.price_one + "</dd><dt>中文服务：</dt><dd>" + _island.chinese + "</dd></dl>";
+                        resultHTML += "</div></div></div>";
+                    }
                     resultHTML += "</div></div></div>";
-                }
-			    resultHTML +="</div></div>";
-                
-
             }
             context.Response.Write(resultHTML);
         }
