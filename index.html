@@ -8,40 +8,28 @@
 	<link rel="stylesheet" href="/subject/140227_mdv_hotels/css/hotel_search.css"/>
     <script src="/Static/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/subject/140227_mdv_hotels/scripts/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="/subject/140227_mdv_hotels/scripts/jquery-highlight1.js"></script>
 	<script type="text/javascript">
 		$(function(doc_ready){
 			var i = 0;
-			$(window).bind("scroll", function (event) {
-				//滚动条到网页头部的 高度，兼容ie,ff,chrome
-				var top = document.documentElement.scrollTop + document.body.scrollTop; //??????
-				//网页的高度
-				var textheight = $(document).height();
-				// 网页高度-top-当前窗口高度 
-				if (textheight - top - $(window).height() <= 100) {
-					if (i >= 25) {
-						return; //控制最大只能加载到100条
-					}
-					$('#divContent').css("height", $(document).height() + 400);
-					i++;
-
-
-					//可以根据实际情况，获取ajax动态数据加载到 divContent中
-
-					var dataParas = { pageIdx:i.toString(),key:getPara().key}; // 这里要直接使用JOSN作为webService参数
-					if(!isEnd)
-					ajaxLoader(dataParas);
-				}
-			});		
+			$(window).bind("scroll", 
+				scrollEvent (event,i)
+			);		
 			$.backstretch('/subject/140227_mdv_hotels/images/bg.jpg');
+			$('#autoHeight').css('min-height',$('.backstretch').outerHeight()-580);
 			var mini=$('#miniNav');
 			$(window).scroll(function(){
 				if($(document).scrollTop()>99){
-					mini.addClass('fixed').addClass('mini-fixed mini-nav').removeClass('subNav').find('#promoSet img').attr({'src':'/subject/140227_mdv_hotels/images/logo_75x34.png','width':75,'height':34});
+					mini.addClass('fixed').addClass('mini-fixed mini-nav').removeClass('subNav');
+					$('#logo75').css('display','block');
+					$('#logo133').css('display','none');
 					mini.find('#promoSet .subTitle').hide();
 					mini.find('#mainSearchBar').removeClass('search');
 					mini.find('#navCont').removeClass('layoutHead').addClass('mini-search');
 				}else{
-					mini.removeClass('fixed').removeClass('mini-fixed mini-nav').addClass('subNav').find('#promoSet img').attr({'src':'/Static/images/logo_133x60.png','width':133,'height':60});
+					mini.removeClass('fixed').removeClass('mini-fixed mini-nav').addClass('subNav');
+					$('#logo75').css('display','none');
+					$('#logo133').css('display','block');
 					mini.find('#promoSet .subTitle').show();
 					mini.find('#mainSearchBar').addClass('search');
 					mini.find('#navCont').addClass('layoutHead').removeClass('mini-search');
@@ -54,9 +42,35 @@
 		var $searchPanel = $('#searchPanel');
 		var $searchLable = $('#searchLable');
 		var $searchList = $('#searchList');
+		function scrollEvent (event,i) {
+			//滚动条到网页头部的 高度，兼容ie,ff,chrome
+			var top = document.documentElement.scrollTop + document.body.scrollTop; //??????
+			//网页的高度
+			var textheight = $(document).height();
+			// 网页高度-top-当前窗口高度 
+			//console.log(textheight - top - $(window).height());
+			if (textheight - top - $(window).height() <= 300) {
+				if (i >= 25) {
+					return; //控制最大只能加载到100条
+				}
+				$('#divContent').animate({"height": $(document).height() + 300},1000);
+				i++;
+
+
+				//可以根据实际情况，获取ajax动态数据加载到 divContent中
+
+				var dataParas = { pageIdx:i.toString(),key:getPara().key}; // 这里要直接使用JOSN作为webService参数
+				
+				if(!isEnd){
+					ajaxLoader(dataParas);
+				}else{
+					return;
+				}
+			}
+		}
 		function checkKey(){
 			if ($("#searchInput").val() == "")
-				$('#searchLable').html('搜索马尔代夫酒店');
+				$('#searchLable').html('搜索酒店名或岛屿');
 		}
 		function getPara(){
 			var search=window.location.hash;
@@ -72,22 +86,22 @@
 		//页面加载时引发
 		
 		$(document).ready(function(){
-			if(!window.location.hash)
-				doc_ready();
+			/*if(!window.location.hash)
+				doc_ready();*/
 			$("#searchInput").val(unescape(getPara().key));
 			$('#searchLable').html('');
+			searchHeight();
 			checkKey();
-			
 		});
 
 		//页面加载时加载前4条
 		function doc_ready() {
-			var jsonParas = {pageIdx:0};
+			var jsonParas = {pageIdx:0,key:getPara().key};
 			ajaxLoader(jsonParas);
 		}
 		
 		function ajaxLoader(dataParas){
-			
+				
 				$.ajax({
 					type: "POST",
 					data: dataParas,
@@ -100,39 +114,43 @@
 					}, //发送请求
 					error: ajax_error(),
 					complete:function(){
-						mainCont.children('#loading').remove();
-					}
+						//$('#loading').remove();
+					},
+					async:false
 				});
 			
 		}
 		
 		function loadingProccess(){
-			//var mainCont=$('#mainContent');
-			$('#state').html('<div id="preloader" class="preloader"></div>正在努力加载中...</div>');
-			//;
-			/*if(!mainCont.children('#loading').length&&!mainCont.children('#null').length){
-				
-				mainCont.append('<div id="state" class="state">');
-			}*/
+			$('#state').html('<div id="loading"><div id="preloader" class="preloader"></div>正在努力加载中...</div>');
 		}
 		
 		function successPrint(data){
-			mainCont=$('#mainContent');
+			var mainCont=$('#mainContent');
 			if(data=="Null"){
 				nothing();
-				isEnd=true;
+				//$(window).unbind('scroll');
 			}else{
 				mainCont.append(data);
-				loadingProccess();
+				searchHeight();
 			}	
 		}
 		
 		function nothing(){
-			$('#state').html('<div id="null" class="null">没有更多了!</div>');
+			$(window).unbind('scroll');
+			$('#state').html('<div id="null" class="null">没有更多了!</div>');		
 		}
 		
 		function ajax_error() {
-			nothing();
+			//$('#state').html('');
+			//nothing();
+		}
+		function searchHeight(){
+			var text =$("#searchInput").val();
+			if(text!=""){
+				//$("#mainContent .keyword").textSearch(text,{markClass: "hightLight"});
+				$("#mainContent .keyword").highlight(text, false);
+			}		
 		}
 	</script>
 </head>
@@ -159,7 +177,8 @@
 		<div id="navCont" class="layoutHead layout">
 			<div class="logo" id="promoSet" style="position: relative;">
 				<a href="http://www.gzl.com.cn" target="_self" title="广之旅唯一官方网站_广之旅">
-				<img src="/Static/images/logo_133x60.png" alt="广之旅唯一官方网站_广之旅" title="广之旅唯一官方网站_广之旅" width="133" height="60" class="load-img"></a>
+				<img id="logo133" src="/Static/images/logo_133x60.png" alt="广之旅唯一官方网站_广之旅" title="广之旅唯一官方网站_广之旅" width="133" height="60" class="load-img"></a>
+				<img id="logo75" style="display:none;" src="/subject/140227_mdv_hotels/images/logo_75x34.png" alt="广之旅唯一官方网站_广之旅" title="广之旅唯一官方网站_广之旅" width="75" height="34" class="load-img"></a>
 				<a href="#" class="subTitle">马尔代夫</a>
 			</div>
 			<div id="mainSearchBar" class="search">
@@ -173,8 +192,6 @@
 								<input id="searchInput" x-webkit-speech="" x-webkit-grammar="builtin:translate" autocomplete="off">
 								<input id="search_id" type="hidden">
 								<div id="searchList" class="searchList" style="display: none;">
-									<div id="hotLine">
-									</div>
 									<div id="autoComplete" class="autoComplete">
 										<table>
 											<tbody><tr>
@@ -209,88 +226,12 @@
 		box-shadow:0 1px 5px #e4e4e4;
 	}
 </style>
-<div class="content layout">
-	<div id="mainContent"></div>
-	<div id="state" class="state"></div>
-	<!-- <div class="group layout">
-		<div class="lfColumn">
-			<dt><img src="images/logo_01.jpg" alt="希尔顿" title="希尔顿"/></dt>
-		</div>
-		<div class="rgColumn mainCont">
-			<div class="intro">
-				<h1 class="summary">希尔顿集团 Hilton</h1>
-				<div class="block">
-					<div class="title18">
-						<h4>行程特色</h4>
-					</div>
-					<p>希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。</p>
-				</div>
-				<div class="block">
-					<div class="title18">
-						<h4>酒店集团说明</h4>
-					</div>
-					<p>希尔顿国际酒店集团(HI)，为总部设于英国的希尔顿集团公司旗下分支，拥有除美国外全球范围内"希尔顿"商标的使用权。美国境内的希尔顿酒店则由希尔顿酒店管理公司(HHC)拥有并管理。希尔顿国际酒店集团经营管理着403间酒店，包括261间希尔顿酒店，142间面向中端市场的"斯堪的克"酒店，以及与总部设在北美的希尔顿酒店管理公司合资经营的、分布在12个国家中的18间"康拉德"(亦称"港丽")酒店。</p><p>希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。希尔顿国际集团在全球的发展以谨慎著称。</p>
-				</div>				
-			</div>
-			<div class="islands">
-				<div class="islands_detail layout">
-					<div class="lfColumn"><img src="images/logo_02.jpg" alt=""/></div>
-					<div class="rgColumn">
-						<h4>Conrad Maldives Rangali Island</h4>
-						<p>港丽岛/康莱德岛</p>
-						<div class="detail layout">
-							<dl>
-								<dt>岛屿级别：</dt>
-								<dd>至尊</dd>
-								<dt>所属环礁：</dt>
-								<dd><p>南阿里夫环礁</p><p>South Alifu Atoll</p></dd>								
-							</dl>
-							<dl>
-								<dt>房间总数：</dt>
-								<dd>150间</dd>
-								<dt>距离马累：</dt>
-								<dd>107公里</dd>
-							</dl>
-							<dl>
-								<dt>一价全包：</dt>
-								<dd>否</dd>
-								<dt>中文服务：</dt>
-								<dd>有</dd>
-							</dl>							
-						</div>
-					</div>
-				</div>
-				<div class="islands_detail layout">
-					<div class="lfColumn"><img src="images/logo_02.jpg" alt=""/></div>
-					<div class="rgColumn">
-						<h4>Conrad Maldives Rangali Island</h4>
-						<p>港丽岛/康莱德岛</p>
-						<div class="detail layout">
-							<dl>
-								<dt>岛屿级别：</dt>
-								<dd>至尊</dd>
-								<dt>所属环礁：</dt>
-								<dd><p>南阿里夫环礁</p><p>South Alifu Atoll</p></dd>								
-							</dl>
-							<dl>
-								<dt>房间总数：</dt>
-								<dd>150间</dd>
-								<dt>距离马累：</dt>
-								<dd>107公里</dd>
-							</dl>
-							<dl>
-								<dt>一价全包：</dt>
-								<dd>否</dd>
-								<dt>中文服务：</dt>
-								<dd>有</dd>
-							</dl>							
-						</div>					
-					</div>
-				</div>				
-			</div>
-		</div>
-	</div> -->
-	
+<div id="autoHeight">
+	<div class="content layout">
+		<div id="mainContent"></div>
+		<div id="state" class="state"></div>
+		
+	</div>
 </div>
 <div class="footer layout">	
 		<div class="layout center content">

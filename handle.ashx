@@ -7,6 +7,7 @@ using System.Web;
 using System.Linq;
 using System.Xml.Linq;
 using System.Text;
+using System.Xml.XPath;
 
 public class handle : IHttpHandler {
     public class groups {
@@ -41,7 +42,7 @@ public class handle : IHttpHandler {
             this.island_name_en = e.Element("island-name-en").Value.ToString();
             this.island_name_zh = e.Element("island-name-zh").Value.ToString();
             this.className = e.Element("class").Value.ToString();
-            this.location_zh = e.Element("island-name-zh").Value.ToString();
+            this.location_zh = e.Element("location-zh").Value.ToString();
             this.location_en = e.Element("location-en").Value.ToString();
             this.rooms = e.Element("rooms").Value.ToString();
             this.distance = e.Element("distance").Value.ToString();
@@ -55,10 +56,12 @@ public class handle : IHttpHandler {
         context.Response.ContentEncoding = Encoding.GetEncoding("utf-8");
         var page = Convert.ToInt16(context.Request.Form["pageIdx"]);
         //var key = context.Request.Form["key"].Trim() != null ? HttpUtility.UrlDecode(context.Request.Form["key"].Trim()) : "*";
-        var key = "";
+        var key = "*";
         try
         {
             key = HttpUtility.UrlDecode(context.Request.Form["key"].Trim());
+            if (key == "")
+                key = "*";
         }
         catch
         {
@@ -75,18 +78,16 @@ public class handle : IHttpHandler {
             IEnumerable<XElement> result=null;
             if (key == "*")
             {
-                result = from g in root.Elements("group")
-                             where int.Parse(g.Attribute("id").Value) >= gt && int.Parse(g.Attribute("id").Value) < lt
-                             select g;
+                result = root.XPathSelectElements("/root/group[position()>" + gt + " and position()<=" + lt + "]");
             }
             else {
                 var searchKey = from g in root.Elements("group")
-                                where g.Element("name").Value.Contains(key)
+                                from island in g.Element("islands").Elements("island")
+                                where g.Element("name").Value.ToLower().Contains(key.ToLower()) || island.Element("island-name-en").Value.ToLower().Contains(key.ToLower()) || island.Element("island-name-zh").Value.ToLower().Contains(key.ToLower()) || island.Element("location-zh").Value.ToLower().Contains(key.ToLower()) || island.Element("location-en").Value.ToLower().Contains(key.ToLower())
                                 select g;
                 XElement tepl = new XElement("root", searchKey);
-                result = from g in tepl.Elements("group")
-                         where int.Parse(g.Attribute("id").Value) >= gt && int.Parse(g.Attribute("id").Value) < lt
-                         select g;
+                result = tepl.XPathSelectElements("/group[position()>" + gt + " and position()<=" + lt + "]");
+                //tepl = new XElement("");
             }
             String resultHTML="Null";
             foreach(var item in result){
@@ -98,7 +99,7 @@ public class handle : IHttpHandler {
                     resultHTML += "<dt><img src=\"" + group.group_pic_url + "\" alt=\"" + group.name + "\" title=\"" + group.name + " width=\"147\" height=\"147\"\"/></dt></div>";
                     resultHTML += "<div class=\"rgColumn mainCont\"><div class=\"intro\">";
 
-                    resultHTML += "<h1 class=\"summary\">" + group.name + "</h1>";
+                    resultHTML += "<h1 class=\"summary keyword\">" + group.name + "</h1>";
                     resultHTML += "<div class=\"block\"><div class=\"title18\"><h4>行程特色</h4></div>";
                     resultHTML += group.special.Replace("[p]", "<p>").Replace("[/p]", "</p>");
                     resultHTML += "</div><div class=\"block\"><div class=\"title18\"><h4>酒店集团说明</h4></div>";
@@ -110,9 +111,9 @@ public class handle : IHttpHandler {
                         var _island = new islandClass(island);
                         resultHTML += "<div class=\"islands_detail layout\">";
                         resultHTML += "<div class=\"lfColumn\"><img width=\"126\" height=\"126\" src=\"" + _island.island_pic_url + "\" alt=\"\"/></div>";
-                        resultHTML += "<div class=\"rgColumn\"><h4>" + _island.island_name_en + "</h4><p>" + _island.island_name_zh + "</p>";
+                        resultHTML += "<div class=\"rgColumn\"><h4 class=\"keyword\">" + _island.island_name_en + "</h4><p class=\"keyword\">" + _island.island_name_zh + "</p>";
                         resultHTML += "<div class=\"detail layout\">";
-                        resultHTML += "<dl><dt>岛屿级别：</dt><dd>" + _island.className + "</dd><dt>所属环礁：</dt><dd><p>" + _island.location_zh + "</p><p>" + _island.location_en + "</p></dd></dl>";
+                        resultHTML += "<dl><dt>岛屿级别：</dt><dd>" + _island.className + "</dd><dt>所属环礁：</dt><dd><p class=\"keyword\">" + _island.location_zh + "</p><p class=\"keyword\">" + _island.location_en + "</p></dd></dl>";
                         resultHTML += "<dl><dt>房间总数：</dt><dd>" + _island.rooms + "</dd><dt>距离马累：</dt><dd>" + _island.distance + "</dd></dl>";
                         resultHTML += "<dl><dt>一价全包：</dt><dd>" + _island.price_one + "</dd><dt>中文服务：</dt><dd>" + _island.chinese + "</dd></dl>";
                         resultHTML += "</div></div></div>";
@@ -123,7 +124,7 @@ public class handle : IHttpHandler {
         }
         catch (ArgumentException ex)
         {
-            context.Response.Write(ex);
+            context.Response.Write("Null");
         }
     }
  

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<group id="0">
-		<name>1希尔顿集团 Hilton</name>
+		<name>希尔顿集团 Hilton</name>
 		<special>[p]希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。[/p]</special>
-		<defined>[p]希尔顿国际酒店集团(HI)，为总部设于英国的希尔顿集团公司旗下分支，拥有除美国外全球范围内"希尔顿"商标的使用权。美国境内的希尔顿酒店则由希尔顿酒店管理公司(HHC)拥有并管理。希尔顿国际酒店集团经营管理着403间酒店，包括261间希尔顿酒店，142间面向中端市场的"斯堪的克"酒店，以及与总部设在北美的希尔顿酒店管理公司合资经营的、分布在12个国家中的18间"康拉德"(亦称"港丽")酒店。[/p][p]希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。希尔顿国际集团在全球的发展以谨慎著称。[/p]</defined>
+		<defined>[p]希尔顿国际酒店集团(HI)，为总部设于英国的希尔顿集团公司旗下分支，拥有除美国外全球范围内"希尔顿"商标的使用权。美国境内的希尔顿酒店则由希尔顿酒店管理公司(HHC)拥有并管理。希尔顿国际酒店集团经营管理着403间酒店，包括261间希尔顿酒店，142间面向中端市场的"斯堪的克"酒店，以及与总部设在北美的希尔顿酒店管理公司合资经营的、分布在12个国家中的18间"康拉德"(亦称"港丽")酒店。[/p][p]希尔顿酒店集团公司（Hilton Hotels Corporation）希尔顿国际酒店集团是总部设于英国的希尔顿集团公司旗下分支，拥有除北美洲外全球范围内希尔顿商标使用权，管理405家酒店，包括263家希尔顿酒店、142家斯堪的克酒店，在全球的78个国家拥有超过7万名雇员，有10多个不同层次的酒店品牌。希尔顿国际集团在全球的发展以谨慎著称。</defined>
 		<group-pic-url>/subject/140227_mdv_hotels/images/logo_01.jpg</group-pic-url>
 		<islands>
-			<island id="0">
+			<island>
 				<island-pic-url>/subject/140227_mdv_hotels/images/island_01.jpg</island-pic-url>
 				<island-name-en>Conrad Maldives Rangali Island</island-name-en>
 				<island-name-zh>港丽岛/康莱德岛</island-name-zh>
@@ -18,15 +18,18 @@
 				<price-one>否</price-one>
 				<chinese>有</chinese>
 			</island>
+			
+			
+			
 		</islands>
 	</group>
 	<group id="1">
-		<name>2四季酒店集团 Four Seasons</name>
+		<name>四季酒店集团 Four Seasons</name>
 		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
-		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
+		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 </defined>
 		<group-pic-url>/subject/140227_mdv_hotels/images/logo_02.jpg</group-pic-url>
 		<islands>
-			<island id="0">
+			<island>
 				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
 				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
 				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
@@ -34,150 +37,753 @@
 				<location-zh>北马累环礁</location-zh>
 				<location-en>North Male Atoll</location-en>
 				<rooms>96间</rooms>
-				<distance>20公里 </distance>
+				<distance>20公里</distance>
 				<price-one>有</price-one>
 				<chinese>有</chinese>
 			</island>
-			<island id="1">
+			<island>
 				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
-				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
+				<island-name-en>Four Seasons Landaa Giraavaru</island-name-en>
+				<island-name-zh>吉拉瓦鲁岛/四季兰达吉拉瓦鲁岛</island-name-zh>
+				<class>至尊</class>
+				<location-zh>巴环礁</location-zh>
+				<location-en>Baa Atoll</location-en>
+				<rooms>102间</rooms>
+				<distance>130公里</distance>
+				<price-one>否</price-one>
 				<chinese>有</chinese>
-			</island>			
+			</island>
+			
+			
 		</islands>
 	</group>
 	<group id="2">
-		<name>3四季酒店集团 Four Seasons</name>
-		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
-		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
-		<group-pic-url>/subject/140227_mdv_hotels/images/logo_02.jpg</group-pic-url>
+		<name>香格里拉酒店集团 Shangri-La Hotels</name>
+		<special>[p]香格里拉酒店集团被视为世界最佳的酒店管理集团之一，在无数公众和业内的投选中，均获得一致的美誉。无论在任何一个城市或度假胜地，全亚洲33间香格里拉酒店及5间商贸饭店都会提供无微不至的服务。[/p]</special>
+		<defined>[p]香格里拉酒店集团从1971年新加坡第一间香格里拉酒店开始，香格里拉酒店集团便不断向国际迈进；以香港为大本营，今日香格里拉已是亚洲区最大的豪华酒店集团。 </defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_03.jpg</group-pic-url>
 		<islands>
-			<island id="0">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_03.jpg</island-pic-url>
+				<island-name-en>Shangri-La`s Villingili Resort&amp;Spa</island-name-en>
+				<island-name-zh>香格里拉岛/香格里拉薇宁姬莉岛</island-name-zh>
 				<class>奢华</class>
-				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
+				<location-zh>西奴环礁</location-zh>
+				<location-en>Seenu Atoll</location-en>
+				<rooms>132间</rooms>
+				<distance>537公里</distance>
+				<price-one>否</price-one>
 				<chinese>有</chinese>
 			</island>
-			<island id="1">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
-				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
-				<chinese>有</chinese>
-			</island>			
+			
 		</islands>
 	</group>
 	<group id="3">
-		<name>4四季酒店集团 Four Seasons</name>
-		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
-		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
-		<group-pic-url>/subject/140227_mdv_hotels/images/logo_02.jpg</group-pic-url>
+		<name>喜来登酒店集团 Sheraton </name>
+		<special>[p]喜来登酒店与度假村集团（Sheraton Hotels and Resorts）是喜达屋（Starwood）酒店集团中最大的连锁旅馆品牌，而它也是集团中第二老的酒店品牌(最老牌的是威斯汀)。喜来登的酒店型态有许多种，从一般的商业旅馆到大型度假村都有；喜来登品牌一直企图维持高品质形象，在世界上的喜来登酒店多半被当地机关评选为五星级酒店。 [/p]</special>
+		<defined>[p]喜来登品牌是在1937年出现的，当时两位企业家Ernest Henderson以及Robert Moore在麻萨诸塞州成立了第一家喜来登酒店。喜来登品牌还有一个副牌叫做福朋喜来登（Four Points by Sheraton），那是一个四星级的商务旅馆品牌。至今，喜来登酒店据点分部极广，遍布五大洲，从香港到斯里兰卡到埃及及津巴布韦等国都可见其旅馆。喜来登总部在美国纽约的White Plains。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_04.jpg</group-pic-url>
 		<islands>
-			<island id="0">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_04.jpg</island-pic-url>
+				<island-name-en>Sheraton Maldives Full Moon Resort &amp; Spa </island-name-en>
+				<island-name-zh>满月岛/喜来登满月岛</island-name-zh>
+				<class>经典 </class>
 				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
-				<chinese>有</chinese>
+				<location-en>North Male Atoll </location-en>
+				<rooms>176间 </rooms>
+				<distance>9公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
 			</island>
-			<island id="1">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
-				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
-				<chinese>有</chinese>
-			</island>			
+			
+			
+			
 		</islands>
 	</group>
 	<group id="4">
-		<name>5四季酒店集团 Four Seasons</name>
-		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
-		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
-		<group-pic-url>/subject/140227_mdv_hotels/images/logo_02.jpg</group-pic-url>
+		<name>康斯坦斯酒店集团 Constance </name>
+		<special>[p]Hotel Constance是世界顶级酒店集团之一，成立于上世纪20年代，总部在毛里求斯。该集团只在海岛国家设立自己的酒店，现在毛里求斯、马尔代夫、塞舌尔、马达加斯加都有分布。 [/p]</special>
+		<defined>[p]Constance Hotels Experience是毛里求斯的一家连锁酒店集团，旗下在毛里求斯、塞舌尔、马达加斯加、马尔代夫等多个地区都有投资建设的高级酒店。 Constance Halaveli Resort（哈拉薇丽岛)和Constance Moofushi Resort（慕芙岛）是集团目前在马尔代夫运营的两个岛屿酒店。集团的主体核心是打造高端的休闲娱乐场所。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_05.jpg</group-pic-url>
 		<islands>
-			<island id="0">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
-				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
-				<chinese>有</chinese>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_05.jpg</island-pic-url>
+				<island-name-en>Constance Moofushi Resort </island-name-en>
+				<island-name-zh>慕芙岛/康斯坦斯魔富士岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>南阿里夫环礁</location-zh>
+				<location-en>South Alifu Atoll </location-en>
+				<rooms>110间 </rooms>
+				<distance>92公里 </distance>
+				<price-one>是 </price-one>
+				<chinese>无 </chinese>
 			</island>
-			<island id="1">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
-				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
-				<chinese>有</chinese>
-			</island>			
+			
+			
+			
 		</islands>
 	</group>
 	<group id="5">
-		<name>6四季酒店集团 Four Seasons</name>
-		<special>[p]四季酒店(Four Seasons Hotel)是一家世界性的豪华连锁酒店集团，在世界各地管理酒店及度假区。四季酒店被Travel and Leisure杂志及Zagat指南评为世界最佳酒店集团之一，并获得AAA 5颗钻石的评级。[/p]</special>
-		<defined>[p]四季酒店集团总部设于加拿大多伦多，1960年由Isadore Sharp创办，首间酒店设于多伦多市Jarvis街。微软主席比尔•盖茨是大股东之一。集团专门从事中型豪华都市酒店和度假村的建设和物业管理，目前在全球共拥有60家酒店。因为和其他国际酒店集团的多样化品牌模式不同，四季集团实行单一品牌模式，所以对于扩张新酒店十分谨慎。 [/p]</defined>
-		<group-pic-url>/subject/140227_mdv_hotels/images/logo_02.jpg</group-pic-url>
+		<name>地中海酒店集团 ClubMed </name>
+		<special>[p]Club Med（全名：Club Méditerranée），地中海会度假村，是一个大型跨国企业，商业经营的度假村集团，前身是一家非营利组织经营，由杰勒德·布利茨（Gérard Blitz）在1950年创办。杰勒德·布利茨先生是比利时犹太人，原来职业为水球运动员。 Club Med度假村，初成立于地中海、西班牙马略卡。 于1990年，在创办人杰勒德·布利茨身后，Club Med 转营为商营企业，在1995年于法国巴黎成为上市公司。 [/p]</special>
+		<defined>[p]Club Med，1950年创建于法国地中海之滨，半个多世纪以来已经成长为全球最大的连锁度假村集团。如今clubmed已拥有遍布全球五大洲30多个国家的80多个度假村，和来自100多个国家、能讲30余种语言的g.o.（亲善的使者）团队。clubmed的“吃住行娱一切费用一价全包”概念，使所有客人都有一个“无忧之旅”，简单地说，“一价全包”包含当地接送服务、多种房型、儿童俱乐部、饕餮美食、多姿多彩的文体活动等，最值得推介的是clubmed的美食琳琅满目，无限饮料畅饮，连红酒也是任饮。而且clubmed“一价全包”理念是与旅行社提供的全包价产品是异曲同工的，但由度假村提供的这种服务，目前中国游客尚未太了解，甚至未听过。但是随着高端旅游市场的发展，clubmed必将成为一种新的旅游模式最直观的体验。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_06.jpg</group-pic-url>
 		<islands>
-			<island id="0">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_06.jpg</island-pic-url>
+				<island-name-en>Club Med Kani </island-name-en>
+				<island-name-zh>卡尼岛/地中海度假村</island-name-zh>
+				<class>经典 </class>
 				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
-				<chinese>有</chinese>
+				<location-en>North Male Atoll </location-en>
+				<rooms>212间 </rooms>
+				<distance>19公里 </distance>
+				<price-one>是 </price-one>
+				<chinese>有 </chinese>
 			</island>
-			<island id="1">
-				<island-pic-url>/subject/140227_mdv_hotels/images/island_02.jpg</island-pic-url>
-				<island-name-en>Four Seasons Kuda Huraa</island-name-en>
-				<island-name-zh>库达呼拉/四季库达岛</island-name-zh>
-				<class>奢华</class>
-				<location-zh>北马累环礁</location-zh>
-				<location-en>North Male Atoll</location-en>
-				<rooms>96间</rooms>
-				<distance>20公里 </distance>
-				<price-one>有</price-one>
-				<chinese>有</chinese>
-			</island>			
+			
+			
+			
 		</islands>
-	</group>	
+	</group>
+	<group id="6">
+		<name>安娜塔拉集团 Anantara </name>
+		<special>[p]Anantara集团全球奢华酒店行业领先的开发商及运营商将在未来4年内迅速扩张全球业务版图，涉及亚洲、印度洋、中东地区市场，旗下将拥有总计50家水疗度假村及酒店。2011年初 Anantara拥有12家度假村，截止年末就增加至16家。随着首次进入越南与中国市场。 [/p]</special>
+		<defined>[p]ANANTARA度假酒店集团。园诗般的海岛SPA 马尔代夫田园诗般的岛屿群当中，Anantara的原意为"无边的水"——Anantara度假村位于隐秘的环礁湖上，泰式风格的度假别墅犹如璀璨夺目的珠宝，在闪烁着绿松石般光芒的印度。在Anantara度假酒店，遐迩闻名的Anantara Spa绝对不容错过。"ANANTARA"这一超五星精品度假酒店品牌，专业投资并运营奢华度假村、酒店及SPA的酒店管理集团。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_07.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_07.jpg</island-pic-url>
+				<island-name-en>Anantara Kihavah Resort &amp; Spa </island-name-en>
+				<island-name-zh>AK岛/安娜塔拉基阿瓦岛</island-name-zh>
+				<class>至尊 </class>
+				<location-zh>巴环礁</location-zh>
+				<location-en>Baa Atoll </location-en>
+				<rooms>78间 </rooms>
+				<distance>136公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_07.jpg</island-pic-url>
+				<island-name-en>Anantara Veli Resort &amp; Spa </island-name-en>
+				<island-name-zh>薇莉岛/安娜塔拉薇莉岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>50间 </rooms>
+				<distance>19公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_07.jpg</island-pic-url>
+				<island-name-en>Anantara Dhigu Resort &amp; Spa </island-name-en>
+				<island-name-zh>笛古岛/安娜塔拉D岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>110间 </rooms>
+				<distance>21公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+		</islands>
+	</group>
+	<group id="7">
+		<name>阿达郎集团 Adaaran </name>
+		<special>[p]Adaaran集团第一座度假村建于1992年的马尔代夫Bathala岛，随着1996年、2000年与2003年三座度假村的建成营业，Adaaran集团也越来越壮大，但仍始终秉承一切为了客人，全面满足客人需要的宗旨，而2006年与2007年两座新型度假村的落成，更增加了集团的自信，更加坚持顾客就是上帝的主旨。 [/p]</special>
+		<defined>[p]Adaaran集团的每个度假村的环境都十分舒适，设计极富创意，装饰新颖别致，都是以自然和谐为设计理念，将时尚别墅与自然风光巧妙的结合在一起，构建出一副天堂画卷。为满足不同客人的不同需要，集团度假村仔细的观注着每一位客人，服务人员更是对工作一丝不苟，注重每一处细节。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_08.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_08.jpg</island-pic-url>
+				<island-name-en>Adaaran Vadoo Prestige Maldives </island-name-en>
+				<island-name-zh>瓦杜岛/阿达郎瓦度岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>50间 </rooms>
+				<distance>8公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_09.jpg</island-pic-url>
+				<island-name-en>Adaaran Hudhuran Fushi </island-name-en>
+				<island-name-zh>白金岛/大劳力士岛</island-name-zh>
+				<class>超值 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>177间 </rooms>
+				<distance>19公里 </distance>
+				<price-one>是 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			
+			
+		</islands>
+	</group>
+	<group id="8">
+		<name>凯悦集团 Hyatt </name>
+		<special>[p]凯悦集团是世界知名的跨国酒店集团，在世界各国管理数百间酒店。现时在全世界43个国家，共有213间凯悦酒店3及度假酒店，共提供超过9万房间，另有29座凯悦酒店正在兴建，其中10座位于中国。集团总部设在美国芝加哥。 [/p]</special>
+		<defined>[p]凯悦集团旗下酒店品牌包括：柏悦(Park Hyatt)，Andaz，君悦(Grand Hyatt)，凯悦(Hyatt Regency)，Hyatt Place，Hyatt Summerfield Suites，凯悦度假村(Hyatt Resorts)及Hyatt Vacation Club 。君悦及柏悦全部属五星级酒店，以豪华驰名。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_09.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_10.jpg</island-pic-url>
+				<island-name-en>Park Hyatt Maldives Hadahaa </island-name-en>
+				<island-name-zh>哈达哈岛/柏悦哈达哈岛</island-name-zh>
+				<class>至尊 </class>
+				<location-zh>卡夫阿里夫环礁</location-zh>
+				<location-en>Gaafu Alifu Atoll </location-en>
+				<rooms>50间 </rooms>
+				<distance>405公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="9">
+		<name>悦椿庄集团 Angsana </name>
+		<special>[p]悦椿度假村成立于2000年，是悦榕庄的姊妹品牌，专为现代感十足及充满活力的年轻族群而设计的生活品牌。 [/p]</special>
+		<defined>[p]悦椿度假村拥有79栋独立的别墅都拥有面海的前廊，让人尽享印度洋海岸的秀美景色。每栋别墅都拥有独立的花园、室内和户外的淋浴设施、按摩池或泳池。2009 年7月新建成“海中阁”水上别墅区，距离本岛1公里，配有私人走道、配备最少21平方米的无边泳池、凌空水上吊床。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_10.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_11.jpg</island-pic-url>
+				<island-name-en>Angsana Velavaru </island-name-en>
+				<island-name-zh>海龟岛/薇拉瓦鲁岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>打鲁环礁</location-zh>
+				<location-en>Dhaalu Atoll </location-en>
+				<rooms>112间 </rooms>
+				<distance>150公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_11.jpg</island-pic-url>
+				<island-name-en> 悦椿度假村/伊胡鲁岛</island-name-en>
+				<island-name-zh>Angsana Ihuru</island-name-zh>
+				<class>经典 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>Dhaalu Atoll </location-en>
+				<rooms>45间 </rooms>
+				<distance>15公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+		</islands>
+	</group>
+	<group id="10">
+		<name>悦榕酒店度假集团 Banyan Tree </name>
+		<special>[p]悦榕酒店度假集团作为全球顶尖精品度假村、公寓住宅及SPA的营运商，悦榕庄把环保意识融合于浪漫旅行中。旗下的酒店、度假村、公寓住宅、SPA、精品零售店及目的地俱乐部均提供了一个能够让人完全放松身心灵的“心静轩”。悦椿度假村是悦榕庄品牌的完美补充，现代感十足、充满活力以及回归自然。 [/p]</special>
+		<defined>[p]悦椿度假村拥有79栋独立的别墅都拥有面海的前廊，让人尽享印度洋海岸的秀美景色。每栋别墅都拥有独立的花园、室内和户外的淋浴设施、按摩池或泳池。2009 年7月新建成“海中阁”水上别墅区，距离本岛1公里，配有私人走道、配备最少21平方米的无边泳池、凌空水上吊床。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_11.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_12.jpg</island-pic-url>
+				<island-name-en>Banyan Tree Vabbinfaru </island-name-en>
+				<island-name-zh>悦榕庄/瓦宾法鲁岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>48间 </rooms>
+				<distance>18公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="11">
+		<name>泰国奢华度假酒店集团 Centara Hotels&amp;Resorts </name>
+		<special>[p]泰国奢华度假酒店集团Centara Hotel Resort，在旅馆业已有超过25年的服务历史，之前的名称是Central Hotel Resort，后来酒店集团认为"Centara"听起来更具泰国味、更有异国情调，所以特别改为现在的名称。 [/p]</special>
+		<defined>[p]2009年11月在马尔代夫的岛屿酒店：Centara Grand Island Resort&amp;Spa Maldives（圣塔拉 格兰德）隆重开业！Centara旗下的酒店基本上都采取会员制，实行一价全包的政策，目的是让每位游客得到舒适安心的居住体验。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_12.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_13.jpg</island-pic-url>
+				<island-name-en>Centara Grand Island Machchafushi </island-name-en>
+				<island-name-zh>圣塔拉岛/中央格兰德岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>南阿里夫环礁</location-zh>
+				<location-en>South Alifu Atoll </location-en>
+				<rooms>112间 </rooms>
+				<distance>87公里 </distance>
+				<price-one>是 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="12">
+		<name>斯里兰卡Chaaya酒店集团 Chaaya Hotels </name>
+		<special>[p]Chaaya酒店集团和John Keells酒店同属于JKH公司，拥有首都科伦坡的2个度假村和位于斯里兰卡和马尔代夫的11家处于黄金地段的豪华酒店，是斯里兰卡最大的酒店运营商。 [/p]</special>
+		<defined>[p]Chaaya的中文意思是“思考”，而整个集团的主旨也是思考每一位客人的需求，提前做出准备，为不同地区的客人提供有丰富多样的个性化服务，在思考的同时保持高水准的服务效率。每一家Chaaya酒店都将让您感受到家的温暖与舒适，让疲惫的身体得到充足的休息，让所有需求都得到满足。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_13.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_14.jpg</island-pic-url>
+				<island-name-en>Chaaya Island Dhonveli </island-name-en>
+				<island-name-zh>梦幻岛/东菲利岛</island-name-zh>
+				<class>超值 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>126间 </rooms>
+				<distance>18公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="13">
+		<name>朱美拉酒店集团 Jumeirah Group </name>
+		<special>[p]朱美拉集团 (Jumeirah Group) 于 2004 年成为迪拜控股旗下一员，在这艘汇聚了迪拜众多顶尖企业和项目的航母上，朱美拉驶向了成长与发展的新旅程。集团的业务范围并不局限于酒店和度假酒店管理。朱美拉集团 (Jumeirah Group) 旗下的业务还包括：朱美拉，朱美拉阿联酋酒店管理学院，朱美拉 Retail，拥有 15 家零售店及网上精品购物店，疯狂维迪水上乐园 (Wild Wadi Waterpark)。 [/p]</special>
+		<defined>[p]朱美拉集团的朱美拉酒店及度假酒店 (Jumeirah Hotels and Resorts)堪称世界上最奢华、最具创新意识的酒店，已荣获无数国际旅游奖项。集团始建于 1997 年，志存高远，立志通过打造世界一流的奢华酒店及度假酒店，成为行业领袖。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_14.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_15.jpg</island-pic-url>
+				<island-name-en>Jumeirah Vittaveli </island-name-en>
+				<island-name-zh>朱美拉岛/朱美拉维塔维丽岛</island-name-zh>
+				<class>至尊 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>91间 </rooms>
+				<distance>15公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="14">
+		<name>假日酒店集团 Holiday Inn Resort </name>
+		<special>[p]假日度假村酒店分布在世界各地适宜家庭度假旅行的热点地区。 有些假日度假村酒店甚至配备了室内或室外水上乐园！ 通过仅针对儿童而开展的活动计划所赚取的额外红利，您可以体验到假日酒店提供的相同设施和卓越服务。 [/p]</special>
+		<defined>[p]假日酒店集团，50多年来，顾客们已渐渐对全球1,300多家假日酒店所提供的友好服务和现代化、极具吸引力的设施产生了依赖。 无论是商务旅行还是休闲旅行，选择入住假日酒店，您都会受到同等的尊重。 最近，经过对全球假日酒店的翻新，入住世界各地的假日酒店，您都能享受到更多一体的服务，并享用崭新的设施。 我们的员工重申他们的承诺，为您提供最佳的服务，关注您的需求，让出差在外的您成功而返，给您一个放松愉快的假期。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_15.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_16.jpg</island-pic-url>
+				<island-name-en>Kandooma Hoilday Inn </island-name-en>
+				<island-name-zh>金多玛/卡杜玛岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>65间 </rooms>
+				<distance>35公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="15">
+		<name>Universal度假村集团 Universal Resorts </name>
+		<special>[p]无[/p]</special>
+		<defined>[p]Universal（环球）酒店集团主要业务就在马尔代夫，旗下拥有Kurumba、Baros、Velassaru、Kuramathi等多个岛屿酒店，每一座度假酒店都充满了自然新清、舒适典雅之感，每一位入住的客人都将感受到家的温暖，而热情的服务人员则会像家人一样，为您提供多样的优质服务，全力满足您的任何需求，让每一位客人都有宾至如归之感。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_16.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_17.jpg</island-pic-url>
+				<island-name-en>Kurumba Maldives </island-name-en>
+				<island-name-zh>椰子岛/可伦巴岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>180间 </rooms>
+				<distance>6公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_18.jpg</island-pic-url>
+				<island-name-en>库拉马蒂岛/库拉玛提岛</island-name-en>
+				<island-name-zh>Kuramathi Island Resort </island-name-zh>
+				<class>经典 </class>
+				<location-zh>北阿里夫环礁</location-zh>
+				<location-en>North Alifu Atoll </location-en>
+				<rooms>290间 </rooms>
+				<distance>59公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_19.jpg</island-pic-url>
+				<island-name-en>维拉沙露岛/薇拉莎鲁岛</island-name-en>
+				<island-name-zh>Velassaru Maldives </island-name-zh>
+				<class>经典 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>127间 </rooms>
+				<distance>12公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_20.jpg</island-pic-url>
+				<island-name-en>巴洛斯岛/巴罗什岛</island-name-en>
+				<island-name-zh>Baros Maldives </island-name-zh>
+				<class>奢华 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>75间 </rooms>
+				<distance>16公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+		</islands>
+	</group>
+	<group id="16">
+		<name>Villa Hotels  </name>
+		<special>[p]Villa Hotel 集团拥有比其他马尔代夫的酒店更多的客房，并且因为带给游客的美丽环境和无可比拟的服务而出名！这里有美味的餐厅，无限制的水上运动，以及集团专属的私人服务来提高游客的旅游质量。 [/p]</special>
+		<defined>[p]Villa Hotel 酒店集团在马尔代夫共有四个岛屿酒店，分别是：天堂岛、太阳岛、皇家岛。假日珊瑚岛。服务宗旨是给自然爱好者、探险者，家庭、或者追求浪漫的人一个非常卓越的假日天堂。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_17.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_21.jpg</island-pic-url>
+				<island-name-en>Paradise Island Resort </island-name-en>
+				<island-name-zh>天堂岛/桃源岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>282间 </rooms>
+				<distance>13公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_22.jpg</island-pic-url>
+				<island-name-en>太阳岛/娜啦古来哆岛</island-name-en>
+				<island-name-zh>Sun Island Resort </island-name-zh>
+				<class>经典 </class>
+				<location-zh>南阿里夫环礁</location-zh>
+				<location-en>South Alifu Atoll </location-en>
+				<rooms>422间 </rooms>
+				<distance>109公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+		</islands>
+	</group>
+	<group id="17">
+		<name>印度泰姬酒店及度假集团 Taj Hotels &amp; Resorts </name>
+		<special>[p]印度酒店集团（IHCL）及其子公司统称为泰姬酒店及度假集团（Taj Hotels Resorts and Palaces），是亚洲最大最卓越的酒店公司之一。印度热情的标志 The Taj Mahal Palace 为富有优雅、独创性和热情气氛的精致生活树立了超过一个世纪的典范。Taj Hotels Resorts and Palaces 隶属于印度著名企业塔塔集团 (Tata Group)。 [/p]</special>
+		<defined>[p]Taj Hotels Resorts and Palaces 成立于1903年，是亚洲最大最高档的酒店集团之一，在印度52处地点开设共达91间酒店，此外还在马尔代夫、马来西亚、澳大利亚、英国、美国、不丹、斯里兰卡、非洲以及中东开设了17间国际酒店。从举世闻名的地标到现代商务酒店、田园诗歌般的海滩度假村乃至正宗的大宫殿，每间 Taj 酒店都将热情的印度风格、世界级的服务与现代奢华独到地融于一体。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_18.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_23.jpg</island-pic-url>
+				<island-name-en>Taj Coral Vivanta </island-name-en>
+				<island-name-zh>泰姬珊瑚岛/泰姬薇薇塔珊瑚礁岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>62间 </rooms>
+				<distance>36公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_24.jpg</island-pic-url>
+				<island-name-en>Taj Exotica Resort</island-name-en>
+				<island-name-zh>泰姬珍品岛/泰姬魅力岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>64间 </rooms>
+				<distance>8公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+		</islands>
+	</group>
+	<group id="18">
+		<name>J Hotels Resorts酒店集团 J Hotels Resorts </name>
+		<special>[p]J Hotels Resorts酒店集团在细节上的精雕细琢，是为了满足宾客每一个心血来潮的欲望。精益求精的服务将为您留下一个完美的居住体验！集团为了满足没有入住客人的需求，特别提供不同的人性化服务！ [/p]</special>
+		<defined>[p]J Hotels Resorts酒店集团在马尔代夫投资建设了两座岛屿酒店，分别是：J Resort Alidhoo（月桂岛，也是以前的希拉蒙岛）和J Resort Raalhuveli。集团保证满足并超越游客最疯狂的期望。追求卓越的承诺是集团的驱动器。为了提供一个首屈一指的休闲度假胜地而一直在努力！ [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_19.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_25.jpg</island-pic-url>
+				<island-name-en>Cinnamon Island Alidhoo </island-name-en>
+				<island-name-zh>月桂岛/希拉蒙岛</island-name-zh>
+				<class>超值 </class>
+				<location-zh>哈阿里夫环礁</location-zh>
+				<location-en>Haa Alifu Atoll </location-en>
+				<rooms>99间 </rooms>
+				<distance>300公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="19">
+		<name>LUX*酒店集团 LUX* Hotel Group </name>
+		<special>[p]LUX*酒店集团建立于1987年,在Mauritius, the Maldives and Réunion岛拥有酒店资产，改酒店集团公司在2005年11月在毛里求斯正式挂牌上市。截止至2009年12月31日已拥有超过2810个股东，并于2011年12月1日正式从Naiade Resorts更名为LUX* Island Resorts。 [/p]</special>
+		<defined>[p]Founded in 1987, LUX* Island Resorts (formerly known as Naiade Resorts Ltd) is a hotel group with properties in Mauritius, the Maldives and Réunion Island. The Company was admitted to the Official List of the Stock Exchange of Mauritius in November 2005. Mainly Mauritian owned, the company has more than 2,810 shareholders as of 31 December 2009. [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_20.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_26.jpg</island-pic-url>
+				<island-name-en>LUX* Island Resort </island-name-en>
+				<island-name-zh>LUX*岛/LUX*度假村</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>南阿里夫环礁</location-zh>
+				<location-en>South Alifu Atoll </location-en>
+				<rooms>193间 </rooms>
+				<distance>100公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="20">
+		<name>总督酒店集团 Viceroy Hotel Group </name>
+		<special>[p]Viceroy Hotel Group（总督酒店集团）总部位于美国加州洛杉矶，是专门投资经营奢华酒店的连锁品牌。 [/p]</special>
+		<defined>[p]Viceroy Hotel Group（总督酒店集团）富有远见的世界顶级设计和激情的灵感服务为客人重新定义了奢华生活概念，并且改变客人对文化传统的理解。每一个Viceroy酒店都会对所在地的居住风格和服务核心经过深入的研究和考虑，力求让挑剔的客人沉迷在一个奇异并且丰盛的生活环境中，集团在马尔代夫投资兴建的岛屿酒店Viceroy Maldives Resort将与2012年4月2日盛大开业！ [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_21.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_27.jpg</island-pic-url>
+				<island-name-en>Viceroy Maldives </island-name-en>
+				<island-name-zh>维斯瑞岛/总督岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>沙维亚尼环礁</location-zh>
+				<location-en>Shaviyani Atoll </location-en>
+				<rooms>61间 </rooms>
+				<distance>192公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="21">
+		<name>可可棕榈酒店集团 Coco Plam </name>
+		<special>[p]可可棕榈酒店集团自1953年开设第一家酒店至今已经过了57年，现已拥有多家酒店，每个酒店都会给您带来不一样的感受。 [/p]</special>
+		<defined>[p]在可可棕榈集团的酒店里，无论您是想度过幽静宁谧、轻松闲适的休闲假日，或是乐趣纷呈的家庭逍遥游，酒店均可为您的假日出游提供无可挑剔的周到安排，为您打造终生难忘的精彩体验。集团中的每个酒店不仅设计独特，而且将酒店与当地自然风光巧妙的结合在一起，自然和谐，舒适宁静是酒店的代名词。除了完备的配套设施与舒适的住宿环境外，热情的工作人员还将根据每位客人的不同需求，提供个性化的优质服务，为客人带来一种全新的度假体验。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_22.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_28.jpg</island-pic-url>
+				<island-name-en>Coco Palm Bodu Hithi </island-name-en>
+				<island-name-zh>可可棕榈岛/波杜希蒂岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>100间 </rooms>
+				<distance>31公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="22">
+		<name>都喜国际集团 Dusit International </name>
+		<special>[p]都喜国际集团在酒店行业拥有超过 60 年的经验。该集团由其名誉主席 Thanpuying Chanut Piyaoui 女士创建于 1948 年。旗下第一家酒店是位于曼谷新街的公主酒店；此后，都喜集团进行资产组合，推出了一系列独特的豪华酒店。酒店均根据泰国文化和传统精心打造，为所有顾客提供个性化的接待服务，让顾客在都喜享有独一无二的体验，这也都喜品牌的愿景：即，“无论您身处何种旅程，都能获得神清气爽身心愉悦的体验。” [/p]</special>
+		<defined>[p]都喜国际集团拥有四大酒店品牌：都喜天阙酒店，都喜 D2 酒店，都喜公主酒店以及都喜滴花妍酒店。同时，我们还拥有都喜冠名的滴花妍水疗馆。2012年2月，位于马尔代夫首都马累西北部芭环礁马杜卢岛的马尔代夫都喜天阙度假酒店正式开业，是在印度洋区域第一家璞富腾精品度假酒店。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_23.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_29.jpg</island-pic-url>
+				<island-name-en>Dusit Thani Maldives </island-name-en>
+				<island-name-zh>都喜天阙岛/杜斯特塔尼岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>巴环礁</location-zh>
+				<location-en>Baa Atoll </location-en>
+				<rooms>100间 </rooms>
+				<distance>119公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="23">
+		<name>The Sun Resorts  </name>
+		<special>[p]The Sun Resorts是毛里求斯的连锁酒店集团，成立于1983年2月10日，拥有近30年的酒店管理经验。 [/p]</special>
+		<defined>[p]The Sun Resorts目前旗下在毛里求斯经营四家五星级酒店会所，在马尔代夫投资经营一家岛屿酒店：Kanuhura（肯尼呼啦）。集团致力于打造豪华精致的度假场所，以满足最挑剔客人所抱有的高期望体验！ [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_24.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_30.jpg</island-pic-url>
+				<island-name-en>Kanuhura </island-name-en>
+				<island-name-zh>卡努呼拉岛/肯尼呼拉岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>拉菲亚尼环礁</location-zh>
+				<location-en>Lhaviyani Atoll </location-en>
+				<rooms>95间 </rooms>
+				<distance>150公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_31.jpg</island-pic-url>
+				<island-name-en>双鱼岛/欧芙菲莉岛</island-name-en>
+				<island-name-zh>Olhuveli Beach &amp; Spa Resort </island-name-zh>
+				<class>经典 </class>
+				<location-zh>南马累环礁</location-zh>
+				<location-en>South Male Atoll </location-en>
+				<rooms>164间 </rooms>
+				<distance>36公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+		</islands>
+	</group>
+	<group id="24">
+		<name>Lily Hotels  </name>
+		<special>[p]暂无该酒店相关信息 [/p]</special>
+		<defined>[p]暂无该酒店相关信息 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_25.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_32.jpg</island-pic-url>
+				<island-name-en>Lily Beach Resort </island-name-en>
+				<island-name-zh>丽莉岛/莉莉岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>南阿里夫环礁</location-zh>
+				<location-en>South Alifu Atoll </location-en>
+				<rooms>119间 </rooms>
+				<distance>86公里 </distance>
+				<price-one>是 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="25">
+		<name>第六感集团 Six Senses Resorts &amp; Spas </name>
+		<special>[p]Six Senses Resorts &amp; Spas第6感集团是一家集度假酒店与SPA开发管理于一身的集团公司，酒店与SPA会所遍布全球。 [/p]</special>
+		<defined>[p]Six Senses Resorts &amp; Spas第6感集团成立于1995年，旗下拥有Soneva、Six Senses Hideaway、Six Senses Latitude，和Evason等品牌的多个度假村，以及Six Senses Spas和Six Senses Destination Spas等专业SPA会所。第六感集团旗下的Six Senses Latitude的品牌创意就是活泼自然，忠实的反映每种不同的风格，Six Senses Latitude设计多样，注重每一个细节，观注每一位客人，全力为客人提供独特的个性化服务，竭力做到最好。在这里，餐饮与娱乐绝不局限于传统模式，而是从客人的喜好出发，大胆创新，将时尚与自然巧妙的融合，为客人带来一种全新的体验。第六感集团旗下的Six senses Soneva 致力于打造一个时尚舒适自然的度假环境，无论是从酒店的设计风格，还是服务标准，都始终如一的坚持高标准。Soneva度假酒店秉承少而精的理念，将度假村与当地自然风光巧妙的结合在一起，加之绿色环保的设施与精致的内部装饰，让客人在近距离的接触自然时，还可以拥有绝对的舒适。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_26.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_33.jpg</island-pic-url>
+				<island-name-en>Six Senses Latitude Laamu </island-name-en>
+				<island-name-zh>拉姆岛/第六感拉姆拉堤岛</island-name-zh>
+				<class>奢华 </class>
+				<location-zh>拉姆环礁</location-zh>
+				<location-en>Laamu Atoll </location-en>
+				<rooms>100间 </rooms>
+				<distance>260公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>有 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="26">
+		<name>喜达屋集团 Starwood Hotels Resorts </name>
+		<special>[p]喜达屋集团是全球最大的酒店及娱乐休闲集团之一，以其饭店的高档豪华著称。 [/p]</special>
+		<defined>[p]喜达屋集团的品牌包括圣·瑞吉斯（St.Regis）、至尊精选（也称豪华精选）（The Luxury Collection）、威斯汀（Westin）、喜来登（Sheraton）、福朋喜来登(Four Points)、艾美（Le Meridien）、W饭店（W Hotels）、雅乐轩（aloft），以及Element。[/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_27.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_34.jpg</island-pic-url>
+				<island-name-en>W Retreat &amp; Spa Resort </island-name-en>
+				<island-name-zh>W岛/W宁静岛</island-name-zh>
+				<class>至尊 </class>
+				<location-zh>北阿里夫环礁</location-zh>
+				<location-en>North Alifu Atoll </location-en>
+				<rooms>78间 </rooms>
+				<distance>80公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="27">
+		<name>Planhotel酒店集团 Planhotel Group </name>
+		<special>[p]Planhotel酒店集团总部位于瑞士卢加诺，是一家从事酒店行业、拥有超过20年经验的国际化酒店管理公司。 [/p]</special>
+		<defined>[p]Planhotel酒店集团致力于开发一价全包的度假村酒店，度假山庄或是魅力城市酒店。所有度假村均位于没被开发损坏过度的印度洋沿岸的马尔代夫、桑给巴尔和肯尼亚。山庄一般位于东非独立的公园内，而城市酒店位于迷人的意大利城市内。度假村和山庄分三个不同的品牌，每个品牌都为最精明的旅客们提供了大量的配套设施和优质服务：钻石度假村(Diamonds Resorts)，桑迪度假村(Sandies Resorts)，探险山庄(Exploreans Lodges)。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_28.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_35.jpg</island-pic-url>
+				<island-name-en>Athuruga Diamonds Island Resort </island-name-en>
+				<island-name-zh>钻石岛/钻石阿沙格岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>南阿里夫环礁</location-zh>
+				<location-en>South Alifu Atoll </location-en>
+				<rooms>71间 </rooms>
+				<distance>50公里 </distance>
+				<price-one>是 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
+	<group id="28">
+		<name>Crown Champa Resorts酒店集团 Crown Champa Resorts </name>
+		<special>[p]Crown Champa Resorts酒店集团,是马尔代夫国有制酒店集团。主要业务就在马尔代夫，旗下拥有Vilamendhoo、Meeru、Veligandu等多个岛屿酒店，每一座度假酒店都充满了自然新清、舒适典雅之感，每一位入住的客人都将感受到家的温暖，而热情的服务人员则会像家人一样，为您提供多样的优质服务，全力满足您的任何需求，让每一位客人都有宾至如归之感。 [/p]</special>
+		<defined>[p]Crown Champa Resorts酒店集团是马尔代夫本土酒店集团,致力于开发马尔代夫当地度假村系列。 [/p]</defined>
+		<group-pic-url>/subject/140227_mdv_hotels/images/logo_29.jpg</group-pic-url>
+		<islands>
+			<island>
+				<island-pic-url>/subject/140227_mdv_hotels/images/island_36.jpg</island-pic-url>
+				<island-name-en>Meeru Island Resort </island-name-en>
+				<island-name-zh>蜜月岛/美茹岛</island-name-zh>
+				<class>经典 </class>
+				<location-zh>北马累环礁</location-zh>
+				<location-en>North Male Atoll </location-en>
+				<rooms>286间 </rooms>
+				<distance>45公里 </distance>
+				<price-one>否 </price-one>
+				<chinese>无 </chinese>
+			</island>
+			
+			
+			
+		</islands>
+	</group>
 </root>
