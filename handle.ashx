@@ -82,21 +82,21 @@ public class handle : IHttpHandler {
             }
             else {
                 var searchKey = from g in root.Elements("group")
-                                from island in g.Element("islands").Elements("island")
-                                where g.Element("name").Value.ToLower().Contains(key.ToLower()) || island.Element("island-name-en").Value.ToLower().Contains(key.ToLower()) || island.Element("island-name-zh").Value.ToLower().Contains(key.ToLower()) || island.Element("location-zh").Value.ToLower().Contains(key.ToLower()) || island.Element("location-en").Value.ToLower().Contains(key.ToLower())
+                                where (g.Element("name").Value.ToLower().Contains(key.ToLower())) || (from island in g.Element("islands").Elements("island") where island.Element("island-name-en").Value.ToLower().Contains(key.ToLower()) || island.Element("island-name-zh").Value.ToLower().Contains(key.ToLower()) || island.Element("location-zh").Value.ToLower().Contains(key.ToLower()) || island.Element("location-en").Value.ToLower().Contains(key.ToLower()) select island).Any()
                                 select g;
                 XElement tepl = new XElement("root", searchKey);
+                
                 result = tepl.XPathSelectElements("/group[position()>" + gt + " and position()<=" + lt + "]");
                 //tepl = new XElement("");
             }
             String resultHTML="Null";
             foreach(var item in result){
-                    var group = new groups(item);
-                    if (resultHTML == "Null")
-                        resultHTML = "";
+                 var group = new groups(item);
+                 if (resultHTML == "Null")
+                    resultHTML = "";
                     resultHTML += "<div class=\"group layout\">";
                     resultHTML += "<div class=\"lfColumn\">";
-                    resultHTML += "<dt><img src=\"" + group.group_pic_url + "\" alt=\"" + group.name + "\" title=\"" + group.name + " width=\"147\" height=\"147\"\"/></dt></div>";
+                    resultHTML += "<dt><img src=\"" + group.group_pic_url + "\" alt=\"" + group.name + "\" title=\"" + group.name + "\" width=\"147\" height=\"147\"/></dt></div>";
                     resultHTML += "<div class=\"rgColumn mainCont\"><div class=\"intro\">";
 
                     resultHTML += "<h1 class=\"summary keyword\">" + group.name + "</h1>";
@@ -110,10 +110,10 @@ public class handle : IHttpHandler {
                     {
                         var _island = new islandClass(island);
                         resultHTML += "<div class=\"islands_detail layout\">";
-                        resultHTML += "<div class=\"lfColumn\"><img width=\"126\" height=\"126\" src=\"" + _island.island_pic_url + "\" alt=\"\"/></div>";
+                        resultHTML += "<div class=\"lfColumn\"><img width=\"126\" height=\"126\" src=\"" + _island.island_pic_url + "\" alt=\"" + _island.island_name_zh + "\" title=\"" + _island.island_name_zh + "\"/></div>";
                         resultHTML += "<div class=\"rgColumn\"><h4 class=\"keyword\">" + _island.island_name_en + "</h4><p class=\"keyword\">" + _island.island_name_zh + "</p>";
                         resultHTML += "<div class=\"detail layout\">";
-                        resultHTML += "<dl><dt>岛屿级别：</dt><dd>" + _island.className + "</dd><dt>所属环礁：</dt><dd><p class=\"keyword\">" + _island.location_zh + "</p><p class=\"keyword\">" + _island.location_en + "</p></dd></dl>";
+                        resultHTML += "<dl><dt>岛屿级别：</dt><dd>" + _island.className + "</dd><dt>环礁：</dt><dd><p class=\"keyword\"><a onClick=\"gosearch()\" href=\"#/?key=" + HttpUtility.UrlPathEncode(_island.location_zh) + "&page=0\">" + _island.location_zh + "</a></p><p class=\"keyword\">" + _island.location_en + "</p></dd></dl>";
                         resultHTML += "<dl><dt>房间总数：</dt><dd>" + _island.rooms + "</dd><dt>距离马累：</dt><dd>" + _island.distance + "</dd></dl>";
                         resultHTML += "<dl><dt>一价全包：</dt><dd>" + _island.price_one + "</dd><dt>中文服务：</dt><dd>" + _island.chinese + "</dd></dl>";
                         resultHTML += "</div></div></div>";

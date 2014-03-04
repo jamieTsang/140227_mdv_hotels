@@ -10,13 +10,41 @@
     <script type="text/javascript" src="/subject/140227_mdv_hotels/scripts/jquery.backstretch.min.js"></script>
     <script type="text/javascript" src="/subject/140227_mdv_hotels/scripts/jquery-highlight1.js"></script>
 	<script type="text/javascript">
-		$(function(doc_ready){
-			var i = 0;
-			$(window).bind("scroll", 
-				scrollEvent (event,i)
-			);		
+		$(function(doc_ready){		
 			$.backstretch('/subject/140227_mdv_hotels/images/bg.jpg');
 			$('#autoHeight').css('min-height',$('.backstretch').outerHeight()-580);
+			scrollHead();
+			checkKey();
+		});
+		var isEnd=false;
+		var $searchInput = $('#searchInput');
+		var $searchPanel = $('#searchPanel');
+		var $searchLable = $('#searchLable');
+		var $searchList = $('#searchList');
+		var i = 0;
+		$(window).bind("scroll",function(event,i){scrollEvent (event)});	
+		function scrollEvent (event) {
+			//滚动条到网页头部的 高度，兼容ie,ff,chrome
+			var top = document.documentElement.scrollTop + document.body.scrollTop; //??????
+			//网页的高度
+			var textheight = $(document).height();
+			// 网页高度-top-当前窗口高度 
+			//console.log(textheight - top - $(window).height());
+			if (textheight - top - $(window).height() <= 300) {
+				if (i >= 25) {
+					return; //控制最大只能加载到100条
+				}
+				$('#divContent').animate({"height": $(document).height() + 300},1000);
+				i++;
+
+
+				//可以根据实际情况，获取ajax动态数据加载到 divContent中
+
+				var dataParas = { pageIdx:i.toString(),key:getPara().key}; // 这里要直接使用JOSN作为webService参数
+				ajaxLoader(dataParas);
+			}
+		}
+		function scrollHead(){
 			var mini=$('#miniNav');
 			$(window).scroll(function(){
 				if($(document).scrollTop()>99){
@@ -35,42 +63,10 @@
 					mini.find('#navCont').addClass('layoutHead').removeClass('mini-search');
 				}
 			});
-			checkKey();
-		});
-		var isEnd=false;
-		var $searchInput = $('#searchInput');
-		var $searchPanel = $('#searchPanel');
-		var $searchLable = $('#searchLable');
-		var $searchList = $('#searchList');
-		function scrollEvent (event,i) {
-			//滚动条到网页头部的 高度，兼容ie,ff,chrome
-			var top = document.documentElement.scrollTop + document.body.scrollTop; //??????
-			//网页的高度
-			var textheight = $(document).height();
-			// 网页高度-top-当前窗口高度 
-			//console.log(textheight - top - $(window).height());
-			if (textheight - top - $(window).height() <= 300) {
-				if (i >= 25) {
-					return; //控制最大只能加载到100条
-				}
-				$('#divContent').animate({"height": $(document).height() + 300},1000);
-				i++;
-
-
-				//可以根据实际情况，获取ajax动态数据加载到 divContent中
-
-				var dataParas = { pageIdx:i.toString(),key:getPara().key}; // 这里要直接使用JOSN作为webService参数
-				
-				if(!isEnd){
-					ajaxLoader(dataParas);
-				}else{
-					return;
-				}
-			}
 		}
 		function checkKey(){
 			if ($("#searchInput").val() == "")
-				$('#searchLable').html('搜索酒店名或岛屿');
+				$('#searchLable').css('display','block').html('搜索酒店名或岛屿');
 		}
 		function getPara(){
 			var search=window.location.hash;
@@ -138,6 +134,7 @@
 		
 		function nothing(){
 			$(window).unbind('scroll');
+			scrollHead();
 			$('#state').html('<div id="null" class="null">没有更多了!</div>');		
 		}
 		
